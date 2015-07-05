@@ -8,5 +8,6 @@
 <body>
     <a href="/angular/1">1</a>
     <a href="/angular/2">2</a>
+    <a href="/angular/3">3</a>
 </body>
 </html>

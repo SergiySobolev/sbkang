@@ -40,5 +40,4 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         return controller;
     }
 
-
 }
