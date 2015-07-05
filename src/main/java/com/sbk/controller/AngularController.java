@@ -1,6 +1,7 @@
 package com.sbk.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -8,18 +9,9 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping(value="/angular")
 public class AngularController {
 
-    @RequestMapping(value = "/1")
-    public ModelAndView angular1(){
-        return new ModelAndView("angular/1");
+    @RequestMapping(value = "/{exampleId}")
+    public ModelAndView angular1(@PathVariable Long exampleId){
+        return new ModelAndView(String.format("angular/%s", exampleId));
     }
 
-    @RequestMapping(value = "/2")
-    public ModelAndView angular2(){
-        return new ModelAndView("angular/2");
-    }
-
-    @RequestMapping(value = "/3")
-    public ModelAndView angular3(){
-        return new ModelAndView("angular/3");
-    }
 }
