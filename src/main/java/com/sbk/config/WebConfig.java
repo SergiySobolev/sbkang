@@ -4,18 +4,24 @@ import net.jawr.web.servlet.JawrSpringController;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
-import java.util.Properties;
+import javax.annotation.Resource;
 
 @Configuration
 @EnableWebMvc
 @ComponentScan({"com.sbk"})
+@PropertySource("classpath:application.properties")
 public class WebConfig extends WebMvcConfigurerAdapter {
+
+    @Resource
+    private Environment env;
 
     @Bean
     public InternalResourceViewResolver viewResolver() {
@@ -36,7 +42,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     @Bean
     public JawrSpringController jawrBaseController(){
         JawrSpringController controller = new JawrSpringController();
-        controller.setConfigLocation("/jawr.properties");
+        controller.setConfigLocation("jawr.properties");
         return controller;
     }
 
