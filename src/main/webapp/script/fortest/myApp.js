@@ -8,5 +8,4 @@
             {"name":"habanero", "spiciness":"LAVA HOT!!"}];
         $scope.spice = "habanero";
     });
-
 })(window.angular);

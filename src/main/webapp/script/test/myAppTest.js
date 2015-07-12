@@ -19,7 +19,4 @@ describe('myController function', function() {
         });
     });
 
-    it("It Should fail", function(){
-        expect(1+1).toBe(3);
-    });
 });
