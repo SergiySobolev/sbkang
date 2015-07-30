@@ -35,6 +35,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/script/**").addResourceLocations("/script/");
+        registry.addResourceHandler("/templates/**").addResourceLocations("/script/templates/");
         registry.addResourceHandler("/angular/**").addResourceLocations("/script/angular/");
         registry.addResourceHandler("/test/**").addResourceLocations("/script/test/");
         registry.addResourceHandler("/css/**").addResourceLocations("/css/");
