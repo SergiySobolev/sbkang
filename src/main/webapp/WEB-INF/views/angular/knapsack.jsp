@@ -17,8 +17,7 @@
     <input type="number" ng-model="knapsack.knapsackCapacity"/><br/>
     <input type="number" ng-model="knapsack.x"/>
     <input type="number" ng-model="knapsack.y"/>
-    <input-knapsack  x="knapsack.x" y="knapsack.y" set-x='knapsack.setX(10)' set-y='knapsack.setY(20)'>
-
+    <input-knapsack  x="knapsack.x" y="knapsack.y">
     </input-knapsack>
 </div>
 </body>
