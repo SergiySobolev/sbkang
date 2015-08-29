@@ -12,5 +12,6 @@
     <a href="/angular/4">4</a><br>
     <a href="/dynamic/knapsack">Knapsack</a><br>
     <a href="/dynamic/slideshow">Slideshow</a><br>
+    <a href="/dynamic/typeahead">Typeahead</a><br>
 </body>
 </html>

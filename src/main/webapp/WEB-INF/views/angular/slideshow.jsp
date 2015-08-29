@@ -7,7 +7,6 @@
   <script src="<c:url value="/script/slideshow/slideshowModule.js"/>"></script>
   <script src="<c:url value="/script/slideshow/slideshowDirectives.js"/>"></script>
   <script src="<c:url value="/script/slideshow/slideshowController.js"/>"></script>
-
   <link rel="stylesheet" type="text/css" media="screen" href="<c:url value="/css/slideshow.css"/>"/>
   <title>Slideshow</title>
 </head>

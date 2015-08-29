@@ -2,10 +2,11 @@
     'use strict';
     var knapsackControllersModule = angular.module("knapsack.controllers",[]);
     knapsackControllersModule.controller("knapsackController", function(){
-        this.knapsackCapacity = 11;
-        this.weight = 15;
-        this.x = 41;
-        this.y = 24;
+        this.weightsPricesArray = [{x:1,y:1},{x:2,y:2}];
+        this.knapsackCapacity = 10;
+        this.solution = function(){
+            console.log("solution");
+        }
     });
 
 })(window.angular);
