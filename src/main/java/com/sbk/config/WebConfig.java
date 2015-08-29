@@ -37,6 +37,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         registry.addResourceHandler("/images/**").addResourceLocations("/images/");
         registry.addResourceHandler("/script/**").addResourceLocations("/script/");
         registry.addResourceHandler("/templates/**").addResourceLocations("/script/templates/");
+        registry.addResourceHandler("/json/**").addResourceLocations("/script/json/");
         registry.addResourceHandler("/angular/**").addResourceLocations("/script/angular/");
         registry.addResourceHandler("/test/**").addResourceLocations("/script/test/");
         registry.addResourceHandler("/css/**").addResourceLocations("/css/");

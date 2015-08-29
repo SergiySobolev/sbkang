@@ -1,4 +1,4 @@
-body {
-    background-color: rgb(230, 230, 230);
-    font-family: Serif;
+.active {
+    background-color: #C44741;
+    color: #f2f2f2;
 }
