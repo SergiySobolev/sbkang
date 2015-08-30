@@ -7,6 +7,7 @@
         <script src="<c:url value="/script/lib/angular.js"/>"></script>
         <script src="<c:url value="/script/knapsack/knapsackModule.js"/>"></script>
         <script src="<c:url value="/script/knapsack/knapsackDirectives.js"/>"></script>
+        <script src="<c:url value="/script/knapsack/knapsackService.js"/>"></script>
         <script src="<c:url value="/script/knapsack/knapsackController.js"/>"></script>
 
         <link rel="stylesheet" type="text/css" media="screen" href="<c:url value="/css/common.css"/>"/>
@@ -14,8 +15,13 @@
     </head>
 <body  ng-app="knapsackModule">
 <div ng-controller="knapsackController as knapsack">
-    <input-knapsack  weights-prices="knapsack.weightsPricesArray">
-    </input-knapsack>
+    <div>
+        <label>
+            Capacity:
+            <input type="number" ng-model="knapsack.capacity"/>
+        </label>
+    </div>
+    <input-knapsack  items="knapsack.items"></input-knapsack>
     <input type="button" value="solution" ng-click="knapsack.solution()"/>
 </div>
 </body>

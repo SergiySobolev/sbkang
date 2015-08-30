@@ -1,4 +1,8 @@
-<div ng-repeat="wp in weightsPrices">
-    <input-weight-price x="wp.x" y="wp.y"></input-weight-price>
+<label>Weights and prices:</label>
+<div>
+    <span>Weight</span><span>Price</span>
 </div>
-<input type="button" value="+" ng-click="addElement()"/>
+<div ng-repeat="item in items">
+    <input-weight-price weight="item.weight" price="item.price"></input-weight-price>
+</div>
+<input type="button" value="+" ng-click="addItem()"/>

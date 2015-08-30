@@ -1,11 +1,12 @@
 (function (angular) {
     'use strict';
-    var knapsackControllersModule = angular.module("knapsack.controllers",[]);
-    knapsackControllersModule.controller("knapsackController", function(){
-        this.weightsPricesArray = [{x:1,y:1},{x:2,y:2}];
-        this.knapsackCapacity = 10;
+    var knapsackControllersModule = angular.module("knapsack.controllers",["knapsack.service"]);
+    knapsackControllersModule.controller("knapsackController", function(knapsackService){
+        this.items =  [{weight:6,price:5},{weight:4,price:3},{weight:3,price:1},{weight:2,price:3},{weight:5,price:6}];
+        this.capacity = 15;
         this.solution = function(){
-            console.log("solution");
+            var itemsIndexesPutToKnapsack = knapsackService.calcMaxCost(this.items, this.capacity);
+            console.log(itemsIndexesPutToKnapsack);
         }
     });
 

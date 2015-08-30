@@ -4,10 +4,12 @@ describe('knapSack module testing', function(){
 
     beforeEach(function (){
 
-        module('knapSackModule');
+        //require('jasmine-collection-matchers');
 
-        inject(function(_knapSackService_) {
-            knapSackService = _knapSackService_;
+        module('knapsack.service');
+
+        inject(function(_knapsackService_) {
+            knapSackService = _knapsackService_;
         });
     });
 
@@ -16,8 +18,10 @@ describe('knapSack module testing', function(){
     });
 
     it('should make text exciting', function (){
-        var result = knapSackService.calcMaxCost([6,4,3,2,5], [5,3,1,3,6], 15);
-        expect(result).toEqual([4,1,0]);
+        var items = [{weight:6,price:5},{weight:4,price:3},{weight:3,price:1},{weight:2,price:3},{weight:5,price:6}];
+        var actualKnapsack = knapSackService.calcMaxCost(items, 15);
+        var expectedKnapsack = [{weight:5,price:6}, {weight:4,price:3}, {weight:6,price:5}];
+        expect(actualKnapsack).toEqual(expectedKnapsack);
     });
 
 
