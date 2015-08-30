@@ -11,18 +11,25 @@
         <script src="<c:url value="/script/knapsack/knapsackController.js"/>"></script>
 
         <link rel="stylesheet" type="text/css" media="screen" href="<c:url value="/css/common.css"/>"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="<c:url value="/css/bootstrap.min.css"/>"/>
         <title>KnapSack</title>
     </head>
 <body  ng-app="knapsackModule">
-<div ng-controller="knapsackController as knapsack">
-    <div>
-        <label>
-            Capacity:
-            <input type="number" ng-model="knapsack.capacity"/>
-        </label>
-    </div>
-    <input-knapsack  items="knapsack.items"></input-knapsack>
-    <input type="button" value="solution" ng-click="knapsack.solution()"/>
+<div ng-controller="knapsackController as knapsack" class="container">
+    <form class="form-horizontal jumbotron" role="form">
+        <div class="form-group">
+            <label>
+                Capacity:
+                <input type="number" class="form-control" ng-model="knapsack.capacity"/>
+            </label>
+        </div>
+        <div class="form-group">
+            <input-knapsack  items="knapsack.items"></input-knapsack>
+        </div>
+        <div class="form-group">
+            <input type="button" class="btn btn-primary" value="Solution" ng-click="knapsack.solution()"/>
+        </div>
+    </form >
 </div>
 </body>
 </html>

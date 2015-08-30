@@ -1,8 +1,18 @@
-<label>Weights and prices:</label>
-<div>
-    <span>Weight</span><span>Price</span>
-</div>
-<div ng-repeat="item in items">
-    <input-weight-price weight="item.weight" price="item.price"></input-weight-price>
-</div>
-<input type="button" value="+" ng-click="addItem()"/>
+<input type="button" class="btn btn-success" value="+" ng-click="addItem()"/>
+<input type="button" class="btn btn-success" value="-" ng-click="removeItem()"/>
+<table>
+    <thead>
+        <tr>
+            <th>Weight</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="item in items">
+           <td colspan="2">
+               <input-weight-price weight="item.weight" price="item.price"></input-weight-price>
+           </td>
+        </tr>
+    </tbody>
+</table>
+

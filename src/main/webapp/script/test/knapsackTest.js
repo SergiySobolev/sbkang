@@ -4,8 +4,6 @@ describe('knapSack module testing', function(){
 
     beforeEach(function (){
 
-        //require('jasmine-collection-matchers');
-
         module('knapsack.service');
 
         inject(function(_knapsackService_) {
