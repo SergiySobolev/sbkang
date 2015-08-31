@@ -1,0 +1,11 @@
+<div class="container">
+   <label>Knapsack contains {{items.length}} items:</label>
+   <div ng-repeat="item in items">
+        [{{$index + 1}}]
+        <label>Weight:{{item.weight}}</label>
+        <label>Price:{{item.price}}</label>
+
+   </div>
+   <label>Total Weight: {{items | sumOfValue:'weight'}}</label><br>
+   <label>Total Price: {{items | sumOfValue:'price'}}</label>
+</div>

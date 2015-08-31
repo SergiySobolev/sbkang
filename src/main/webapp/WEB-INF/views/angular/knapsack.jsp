@@ -29,6 +29,7 @@
         <div class="form-group">
             <input type="button" class="btn btn-primary" value="Solution" ng-click="knapsack.solution()"/>
         </div>
+        <solution items="knapsack.result" ng-show="knapsack.solutionConstructed()"></solution>
     </form >
 </div>
 </body>
