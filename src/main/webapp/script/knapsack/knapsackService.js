@@ -65,7 +65,8 @@
                 }
             }
             var maxKnapSack = [];
-            return buildMaxKnapSack(k, maxWeight, items, cost, maxKnapSack);
+            buildMaxKnapSack(k, maxWeight, items, cost, maxKnapSack)
+            return [{maxKnapSack:maxKnapSack, cost:cost}];
         };
         return {
             calcMaxCost:calcMaxCost

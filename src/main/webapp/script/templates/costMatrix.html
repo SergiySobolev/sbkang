@@ -1,0 +1,10 @@
+<div class="container">
+    <label>Cost matrix:</label>
+    <table class="table-bordered">
+        <tr ng-repeat="row in items track by $index">
+            <td ng-repeat="element in row track by $index" style="padding:3px">
+                {{element}}
+            </td>
+        </tr>
+    </table>
+</div>

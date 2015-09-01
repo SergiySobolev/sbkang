@@ -29,7 +29,8 @@
         <div class="form-group">
             <input type="button" class="btn btn-primary" value="Solution" ng-click="knapsack.solution()"/>
         </div>
-        <solution items="knapsack.result" ng-show="knapsack.solutionConstructed()"></solution>
+        <solution items="knapsack.maxKnapSack" ng-show="knapsack.solutionConstructed()"></solution><br>
+        <cost-matrix items="knapsack.cost" ng-show="knapsack.solutionConstructed()"></cost-matrix>
     </form >
 </div>
 </body>
